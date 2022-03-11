@@ -6,12 +6,12 @@ const app = express();
 const db = require("./app/models");
 
 // For production
-// db.sequelize.sync();
+db.sequelize.sync();
 
 // For development
-db.sequelize.sync({ force: true }).then(() => {
-  console.log("Drop and re-sync db.");
-});
+// db.sequelize.sync({ force: true }).then(() => {
+//   console.log("Drop and re-sync db.");
+// });
 
 var corsOptions = {
   origin: "http://localhost:8081",
