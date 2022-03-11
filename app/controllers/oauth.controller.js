@@ -39,7 +39,7 @@ exports.createToken = (req, res) => {
                 if (password == dataUser.dataValues.password) {
                   var fiveMinutesLater = new Date();
                   fiveMinutesLater.setMinutes(
-                    fiveMinutesLater.getMinutes() + 5
+                    fiveMinutesLater.getMinutes() + 1
                   );
                   const token = {
                     access_token: makeid(40),
