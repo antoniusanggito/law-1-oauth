@@ -48,7 +48,6 @@ exports.createToken = (req, res) => {
                     client_id: dataClient.dataValues.client_id,
                     refresh_token: makeid(40),
                   };
-                  console.log(token);
 
                   Token.create(token)
                     .then((data) => res.send(data))
